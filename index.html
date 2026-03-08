@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anish Kumar | Software Development Engineer</title>
+    <meta name="description"
+        content="Portfolio of Anish Kumar — SDE-1 at Jio Platforms Limited specializing in Android AOSP, System-Level APIs, and Backend Engineering.">
+    <meta name="author" content="Anish Kumar">
+    <meta name="theme-color" content="#06060e">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Anish Kumar | Software Development Engineer">
+    <meta property="og:description"
+        content="SDE-1 at Jio Platforms Limited — Android AOSP, System-Level APIs, Backend Engineering.">
+    <meta property="og:image" content="profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anish Kumar | Software Development Engineer">
+    <meta name="twitter:description"
+        content="SDE-1 at Jio Platforms Limited — Android AOSP, System-Level APIs, Backend Engineering.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Floating Particles Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>AK<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link nav-link-cta">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-content">
+            <div class="hero-avatar animate-fade-up" id="hero-avatar-trigger" title="Click to enlarge">
+                <img src="profile.jpg" alt="Anish Kumar" class="hero-avatar-img">
+                <div class="hero-avatar-ring"></div>
+            </div>
+
+            <!-- Image Lightbox -->
+            <div class="lightbox-overlay" id="lightbox-overlay" role="dialog" aria-modal="true"
+                aria-label="Profile photo enlarged">
+                <button class="lightbox-close" id="lightbox-close" aria-label="Close image">&times;</button>
+                <img src="profile.jpg" alt="Anish Kumar — Full size profile photo" class="lightbox-img"
+                    id="lightbox-img" loading="lazy">
+            </div>
+            <p class="hero-greeting animate-fade-up">Hello, I'm</p>
+            <h1 class="hero-name animate-fade-up delay-1">Anish Kumar</h1>
+            <div class="hero-title-wrapper animate-fade-up delay-2">
+                <span class="hero-title-static">I'm a </span>
+                <span class="hero-title-dynamic" id="typed-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-description animate-fade-up delay-3">
+                Software Engineer specializing in <span class="highlight">Android AOSP</span>,
+                <span class="highlight">System-Level APIs</span>, and <span class="highlight">Backend Engineering</span>
+                — optimizing software for <span class="highlight">17M+ devices</span> at Jio Platforms Limited.
+            </p>
+            <div class="hero-stats animate-fade-up delay-4">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="2">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="800">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">DSA Problems</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="17">0</span><span class="stat-plus">M+</span>
+                    <span class="stat-label">Devices Impacted</span>
+                </div>
+            </div>
+            <div class="hero-actions animate-fade-up delay-5">
+                <a href="#contact" class="btn btn-primary">
+                    <span>Get In Touch</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <a href="Anish_Kumar_Resume.pdf" download class="btn btn-ghost">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>Download Resume</span>
+                </a>
+            </div>
+            <div class="hero-socials animate-fade-up delay-5">
+                <a href="https://www.linkedin.com/in/anish-kumar-aks/" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+                <a href="https://leetcode.com/anish121" target="_blank" rel="noopener noreferrer" class="social-link"
+                    aria-label="LeetCode">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+                    </svg>
+                </a>
+                <a href="https://auth.geeksforgeeks.org/user/anishaks121" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="GeeksforGeeks">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M21.45 14.315c-.143.28-.334.532-.565.745a3.691 3.691 0 0 1-1.104.695 4.51 4.51 0 0 1-3.116-.016 3.79 3.79 0 0 1-2.135-2.078 3.571 3.571 0 0 1-.16-.677h2.737a1.227 1.227 0 0 0 .891-.177.726.726 0 0 0 .227-.554.725.725 0 0 0-.227-.553 1.227 1.227 0 0 0-.891-.177h-2.945a3.087 3.087 0 0 1 .007-.378h2.938a1.227 1.227 0 0 0 .891-.177.726.726 0 0 0 .227-.554.725.725 0 0 0-.227-.553 1.227 1.227 0 0 0-.891-.177h-2.538a3.571 3.571 0 0 1 .16-.677 3.79 3.79 0 0 1 2.135-2.078 4.51 4.51 0 0 1 3.116-.016c.412.147.79.36 1.104.695.231.213.422.465.565.745a.693.693 0 0 0 .349.288c.145.05.301.04.44-.028a.723.723 0 0 0 .312-.341.682.682 0 0 0 .023-.46 4.985 4.985 0 0 0-.78-1.075 4.916 4.916 0 0 0-1.524-.96 6.21 6.21 0 0 0-4.26.007 5.286 5.286 0 0 0-2.924 2.835 5.113 5.113 0 0 0-.3 1.065h-1.12a5.113 5.113 0 0 0-.3-1.065 5.286 5.286 0 0 0-2.924-2.835 6.21 6.21 0 0 0-4.26-.007 4.916 4.916 0 0 0-1.524.96A4.985 4.985 0 0 0 2.2 9.462a.682.682 0 0 0 .023.46.723.723 0 0 0 .312.341c.139.068.295.078.44.028a.693.693 0 0 0 .349-.288c.143-.28.334-.532.565-.745a3.691 3.691 0 0 1 1.104-.695 4.51 4.51 0 0 1 3.116.016A3.79 3.79 0 0 1 10.244 10.657c.08.214.133.44.16.677H7.866a1.227 1.227 0 0 0-.891.177.725.725 0 0 0-.227.553c0 .222.08.419.227.554.236.177.554.177.891.177h2.945a3.087 3.087 0 0 1-.007.378H7.866a1.227 1.227 0 0 0-.891.177.725.725 0 0 0-.227.553c0 .222.08.419.227.554.236.177.554.177.891.177h2.737c-.027.233-.08.455-.16.677a3.79 3.79 0 0 1-2.135 2.078 4.51 4.51 0 0 1-3.116.016 3.691 3.691 0 0 1-1.104-.695 3.181 3.181 0 0 1-.565-.745.693.693 0 0 0-.349-.288.681.681 0 0 0-.44.028.723.723 0 0 0-.312.341.682.682 0 0 0-.023.46c.166.397.408.766.78 1.075.48.39 1.004.694 1.524.96a6.21 6.21 0 0 0 4.26-.007 5.286 5.286 0 0 0 2.924-2.835c.134-.34.233-.698.3-1.065h1.12c.067.367.166.725.3 1.065a5.286 5.286 0 0 0 2.924 2.835 6.21 6.21 0 0 0 4.26.007 4.916 4.916 0 0 0 1.524-.96c.372-.309.614-.678.78-1.075a.682.682 0 0 0-.023-.46.723.723 0 0 0-.312-.341.681.681 0 0 0-.44-.028z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/anishks22" target="_blank" rel="noopener noreferrer" class="social-link"
+                    aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>
+                </a>
+                <a href="mailto:anish.aks121@gmail.com" class="social-link" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator animate-fade-up delay-5">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="section-number">01.</span> About Me
+            </h2>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        I'm a <span class="highlight">Software Engineer</span> with expertise in
+                        <span class="highlight">Android AOSP</span>, system-level APIs, and
+                        <span class="highlight">SELinux policies</span>, experienced in optimizing
+                        software for <span class="highlight">17M+ devices</span>.
+                    </p>
+                    <p>
+                        Skilled in <span class="highlight">Java, C++, Kotlin</span>, and Linux internals,
+                        with proven ability to debug build failures and improve system reliability.
+                        Strong problem solver with <span class="highlight">800+ DSA problems solved</span>
+                        and deep experience in logging infrastructure, API development, and device optimization.
+                    </p>
+                    <p>
+                        Currently contributing to the development of system-level Android components
+                        and scalable backend services as part of the <span class="highlight">JioOS</span>
+                        and <span class="highlight">JioTeleOS</span> teams at Jio Platforms Limited.
+                    </p>
+                </div>
+                <div class="about-info reveal">
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                        </div>
+                        <div class="info-card-content">
+                            <span class="info-label">Name</span>
+                            <span class="info-value">Anish Kumar</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <div class="info-card-content">
+                            <span class="info-label">Location</span>
+                            <span class="info-value">Navi Mumbai, Maharashtra</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
+                        </div>
+                        <div class="info-card-content">
+                            <span class="info-label">Email</span>
+                            <span class="info-value">anish.aks121@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                        </div>
+                        <div class="info-card-content">
+                            <span class="info-label">Phone</span>
+                            <span class="info-value">+91-6204741025</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                            </svg>
+                        </div>
+                        <div class="info-card-content">
+                            <span class="info-label">Current Role</span>
+                            <span class="info-value">SDE-1 @ Jio Platforms Limited</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="section-number">02.</span> Experience
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Dec 2024 — Present</div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <h3>Software Development Engineer 1</h3>
+                            <span class="company-badge">Jio Platforms Limited</span>
+                            <span class="location-badge">Navi Mumbai</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Developed <strong>KernelLog, PcapLog, and BTLog APIs</strong> for log separation,
+                                improving crash traceability by <span class="highlight">40%</span></li>
+                            <li>Built API to calculate <strong>CPU usage %</strong> for real-time performance monitoring
+                            </li>
+                            <li>Applied <strong>Factory and Singleton design patterns</strong> in logging architecture
+                            </li>
+                            <li>Designed <strong>Reboot & Standby Scheduling APIs</strong> for automated device
+                                operations</li>
+                            <li>Created <strong>Event Block API</strong> to prevent database flooding from repetitive
+                                event codes</li>
+                            <li>Resolved multiple <strong>SEPolicy AVC issues</strong> in AOSP, enhancing security and
+                                stability</li>
+                            <li>Debugged and resolved <strong>AOSP build issues</strong>, ensuring smooth SDK
+                                integration</li>
+                            <li>Ported <strong>JioSDK service</strong> across devices and Android versions</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Android AOSP</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">SELinux</span>
+                            <span class="tag">System APIs</span>
+                            <span class="tag">ADB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Dec 2023 — Dec 2024</div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <h3>Software Engineer (GET)</h3>
+                            <span class="company-badge">Jio Platforms Limited</span>
+                            <span class="location-badge">Navi Mumbai</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Implemented APIs in <strong>JioSDK</strong> for native-system communication, supporting
+                                <span class="highlight">17M+ devices</span>
+                            </li>
+                            <li>Integrated and debugged <strong>Coovachilli (Hotspot Management)</strong> with ACS
+                                (TR-069 client)</li>
+                            <li>Resolved multithreading issues, improving networking performance by <span
+                                    class="highlight">25%</span></li>
+                            <li>Fixed <strong>AVC/SEPolicy issues</strong> and optimized native C++ modules</li>
+                            <li>Strong experience in <strong>AOSP architecture</strong>, internals, and build debugging
+                            </li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">JioSDK</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">AOSP</span>
+                            <span class="tag">Azure</span>
+                            <span class="tag">Multithreading</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="section-number">03.</span> Projects
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card project-card-featured reveal">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                                <line x1="12" y1="18" x2="12.01" y2="18" />
+                            </svg>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-date">Dec 2023 — Present</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">JioSDK — System-Level SDK</h3>
+                    <p class="project-org">Jio Platforms Limited</p>
+                    <p class="project-desc">
+                        Developed and maintained <strong>JioSDK</strong>, a system-level Android SDK deployed on
+                        <strong>17M+ JioOS devices</strong>.
+                        Built native APIs enabling communication between system and application layers.
+                        Implemented <strong>KernelLog, PcapLog, and BTLog APIs</strong> for crash traceability (40%
+                        improvement).
+                        Ported the SDK across multiple Android versions and device variants.
+                        Experience with <strong>complete AOSP build system</strong>, SEPolicy, and SDK integration.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Android AOSP</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">JNI</span>
+                        <span class="tag">SELinux</span>
+                        <span class="tag">System APIs</span>
+                        <span class="tag">17M+ Devices</span>
+                    </div>
+                </div>
+                <div class="project-card project-card-featured reveal">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                                <line x1="4" y1="22" x2="4" y2="15" />
+                            </svg>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-date">Dec 2023 — Dec 2024</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Jio TR-069 / ACS Client</h3>
+                    <p class="project-org">Jio Platforms Limited</p>
+                    <p class="project-desc">
+                        Worked on <strong>TR-069 (CWMP) protocol</strong> implementation for remote device management
+                        via the <strong>Auto Configuration Server (ACS)</strong>.
+                        Integrated TR-069 client with JioOS for remote provisioning, firmware updates, and device
+                        diagnostics across Jio's device ecosystem.
+                        Debugged and resolved <strong>AVC/SEPolicy issues</strong> in the AOSP integration layer.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">TR-069</span>
+                        <span class="tag">ACS</span>
+                        <span class="tag">CWMP</span>
+                        <span class="tag">Remote Management</span>
+                        <span class="tag">AOSP</span>
+                    </div>
+                </div>
+                <div class="project-card project-card-featured reveal">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                                <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                                <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                                <circle cx="12" cy="20" r="1" />
+                            </svg>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-date">Dec 2023 — Dec 2024</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Coovachilli — Hotspot Management</h3>
+                    <p class="project-org">Jio Platforms Limited</p>
+                    <p class="project-desc">
+                        Integrated and debugged <strong>Coovachilli (CoovaChilli)</strong>, an open-source captive
+                        portal and access controller for hotspot management.
+                        Resolved <strong>multithreading issues</strong> improving networking performance by
+                        <strong>25%</strong>.
+                        Optimized <strong>native C++ modules</strong> and fixed AVC/SEPolicy issues for seamless AOSP
+                        integration.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">CoovaChilli</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">Hotspot</span>
+                        <span class="tag">Multithreading</span>
+                        <span class="tag">Networking</span>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-date">Jun 2022 — Jun 2023</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Water Quality Monitoring Using IoT</h3>
+                    <p class="project-org">WBUT, Kolkata</p>
+                    <p class="project-desc">
+                        Implemented sensors to measure <strong>pH, turbidity, and temperature</strong>,
+                        integrated with <strong>ThingSpeak</strong> for real-time monitoring.
+                        Developed a <strong>mobile app</strong> for visualizing data via dynamic graphs and reports.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">IoT</span>
+                        <span class="tag">ThingSpeak</span>
+                        <span class="tag">Mobile App</span>
+                        <span class="tag">Sensors</span>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-date">Sep 2022 — Feb 2023</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Contact Management Application</h3>
+                    <p class="project-org">Personal Project</p>
+                    <p class="project-desc">
+                        Developed a <strong>RESTful API with Spring Boot</strong> for HTTP requests/responses.
+                        Built frontend using <strong>Thymeleaf</strong> with relational DB integration.
+                        Applied knowledge of REST APIs, Spring Boot, and backend-frontend integration.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">REST API</span>
+                        <span class="tag">Thymeleaf</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="section-number">04.</span> Technical Skills
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
+                        </div>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-dot"></span>Java</div>
+                        <div class="skill-item"><span class="skill-dot"></span>C++</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Kotlin</div>
+                        <div class="skill-item"><span class="skill-dot"></span>SQL</div>
+                        <div class="skill-item"><span class="skill-dot"></span>C</div>
+                    </div>
+                </div>
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                                <line x1="12" y1="18" x2="12.01" y2="18" />
+                            </svg>
+                        </div>
+                        <h3>Core Expertise</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-dot"></span>Android AOSP</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Full AOSP Build</div>
+                        <div class="skill-item"><span class="skill-dot"></span>SELinux / SEPolicy</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Linux Internals</div>
+                        <div class="skill-item"><span class="skill-dot"></span>OOPS</div>
+                        <div class="skill-item"><span class="skill-dot"></span>DSA</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Multithreading</div>
+                        <div class="skill-item"><span class="skill-dot"></span>IPC (AIDL)</div>
+                        <div class="skill-item"><span class="skill-dot"></span>AOSP Build Debugging</div>
+                        <div class="skill-item"><span class="skill-dot"></span>System Optimization</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Device Porting</div>
+                        <div class="skill-item"><span class="skill-dot"></span>HAL / Kernel Modules</div>
+                    </div>
+                </div>
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                            </svg>
+                        </div>
+                        <h3>Android</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-dot"></span>Android Framework</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Android SDK</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Android NDK</div>
+                        <div class="skill-item"><span class="skill-dot"></span>ADB</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Broadcast Receiver</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Services</div>
+                    </div>
+                </div>
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                            </svg>
+                        </div>
+                        <h3>Frameworks & Tools</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-dot"></span>Spring Boot</div>
+                        <div class="skill-item"><span class="skill-dot"></span>REST APIs</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Postman</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Git</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Jira</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Microsoft Azure</div>
+                        <div class="skill-item"><span class="skill-dot"></span>JUnit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="section-number">05.</span> Education
+            </h2>
+            <div class="education-card reveal">
+                <div class="education-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5" />
+                    </svg>
+                </div>
+                <div class="education-content">
+                    <h3>Maulana Abul Kalam Azad University of Technology (WBUT)</h3>
+                    <p class="education-degree">B.Tech in Information Technology</p>
+                    <p class="education-duration">Aug 2019 — Jul 2023 • Kolkata, West Bengal</p>
+                    <div class="education-cgpa">
+                        <div class="cgpa-circle">
+                            <svg viewBox="0 0 36 36" class="cgpa-ring">
+                                <path class="cgpa-ring-bg"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="cgpa-ring-fill" stroke-dasharray="91.7, 100"
+                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            </svg>
+                            <span class="cgpa-number">9.17</span>
+                        </div>
+                        <span class="cgpa-label">CGPA / 10.0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements -->
+            <h2 class="section-title reveal" style="margin-top: 4rem;">
+                <span class="section-number">★</span> Achievements
+            </h2>
+            <div class="achievements-grid">
+                <div class="achievement-card reveal">
+                    <div class="achievement-number">800+</div>
+                    <div class="achievement-text">DSA Problems Solved</div>
+                    <div class="achievement-sub">LeetCode & HackerRank</div>
+                </div>
+                <div class="achievement-card reveal">
+                    <div class="achievement-number">Top 1%</div>
+                    <div class="achievement-text">TCS CodeVita</div>
+                    <div class="achievement-sub">Ranked 1656th among 100K+ participants</div>
+                </div>
+                <div class="achievement-card reveal">
+                    <div class="achievement-number">17M+</div>
+                    <div class="achievement-text">Devices Impacted</div>
+                    <div class="achievement-sub">Through JioSDK APIs</div>
+                </div>
+                <div class="achievement-card reveal">
+                    <div class="achievement-number">40%</div>
+                    <div class="achievement-text">Crash Traceability</div>
+                    <div class="achievement-sub">Improvement via Logging APIs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section section-alt" id="certifications">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="section-number">06.</span> Certifications
+            </h2>
+            <div class="certifications-grid">
+                <div class="cert-card reveal">
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7" />
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                        </svg>
+                    </div>
+                    <h4>Become a Full-Stack Web Developer</h4>
+                    <p class="cert-issuer">LinkedIn</p>
+                    <p class="cert-date">Jan 2024</p>
+                    <a href="https://www.linkedin.com/learning/certificates/fcdcc9468a8651ff4a6346982cf5d85cb9e8b9c99bc55d70065549fb176ee028/"
+                        target="_blank" rel="noopener noreferrer" class="cert-link">View Credential →</a>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7" />
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                        </svg>
+                    </div>
+                    <h4>Engineering Virtual Program</h4>
+                    <p class="cert-issuer">Goldman Sachs</p>
+                    <p class="cert-date">Jul 2022</p>
+                    <a href="https://drive.google.com/file/d/1RPLSgMDQZAdCzR7fdxp3R7bTXf53iN8i/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer" class="cert-link">View Credential →</a>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7" />
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                        </svg>
+                    </div>
+                    <h4>Programming in Java</h4>
+                    <p class="cert-issuer">NPTEL</p>
+                    <p class="cert-date">Sep 2020</p>
+                    <a href="https://drive.google.com/file/d/18X8Mztj6-JKpowdc09SuZDm9yp08CUEc/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer" class="cert-link">View Credential →</a>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7" />
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                        </svg>
+                    </div>
+                    <h4>TCS CodeVita Round-2</h4>
+                    <p class="cert-issuer">Tata Consultancy Services</p>
+                    <p class="cert-date">May 2022</p>
+                    <a href="https://drive.google.com/file/d/114xBaNZDdy6lGJ7WT6yAX99rfTaIiV6A/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer" class="cert-link">View Credential →</a>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7" />
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                        </svg>
+                    </div>
+                    <h4>The Joy of Computing using Python</h4>
+                    <p class="cert-issuer">NPTEL</p>
+                    <p class="cert-date">Sep 2020</p>
+                    <a href="https://drive.google.com/file/d/19z5UvbqrzZKLNGOPiWPAw87wnjQ4le25/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer" class="cert-link">View Credential →</a>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7" />
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                        </svg>
+                    </div>
+                    <h4>Career Edge</h4>
+                    <p class="cert-issuer">TCS iON LifeLong Learning</p>
+                    <p class="cert-date">Jun 2020</p>
+                    <p class="cert-id">ID: 119854-8008669-1016</p>
+                    <a href="https://drive.google.com/file/d/1B82hUjnYjBebHHm7Q6vdO8D-5tb3vsNl/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer" class="cert-link">View Credential →</a>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7" />
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                        </svg>
+                    </div>
+                    <h4>Python Classes and Inheritance</h4>
+                    <p class="cert-issuer">Coursera</p>
+                    <p class="cert-date">Aug 2020</p>
+                    <p class="cert-id">ID: SALD58QPQ9LE</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/SALD58QPQ9LE" target="_blank" rel="noopener noreferrer"
+                        class="cert-link">View Credential →</a>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7" />
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                        </svg>
+                    </div>
+                    <h4>Data Collection and Processing with Python</h4>
+                    <p class="cert-issuer">Coursera</p>
+                    <p class="cert-date">Aug 2020</p>
+                    <p class="cert-id">ID: C6BNBGDXTHGP</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/C6BNBGDXTHGP" target="_blank" rel="noopener noreferrer"
+                        class="cert-link">View Credential →</a>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7" />
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                        </svg>
+                    </div>
+                    <h4>Python Functions, Files, and Dictionaries</h4>
+                    <p class="cert-issuer">Coursera</p>
+                    <p class="cert-date">Jul 2020</p>
+                    <p class="cert-id">ID: EGVVU9JR9LKZ</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/EGVVU9JR9LKZ" target="_blank" rel="noopener noreferrer"
+                        class="cert-link">View Credential →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="section-number">07.</span> Get In Touch
+            </h2>
+            <div class="contact-content reveal">
+                <p class="contact-text">
+                    I'm always open to discussing new opportunities, interesting projects,
+                    or ways to contribute to your team. Feel free to reach out!
+                </p>
+                <div class="contact-cards">
+                    <a href="mailto:anish.aks121@gmail.com" class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
+                        </div>
+                        <span class="contact-card-label">Email</span>
+                        <span class="contact-card-value">anish.aks121@gmail.com</span>
+                    </a>
+                    <a href="tel:+916204741025" class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                        </div>
+                        <span class="contact-card-label">Phone</span>
+                        <span class="contact-card-value">+91-6204741025</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/anish-kumar-aks/" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </div>
+                        <span class="contact-card-label">LinkedIn</span>
+                        <span class="contact-card-value">anish-kumar-aks</span>
+                    </a>
+                    <a href="https://github.com/anishks22" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                            </svg>
+                        </div>
+                        <span class="contact-card-label">GitHub</span>
+                        <span class="contact-card-value">anishks22</span>
+                    </a>
+                </div>
+                <a href="mailto:anish.aks121@gmail.com" class="btn btn-primary btn-lg">
+                    <span>Say Hello 👋</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">Designed &amp; Built by <span class="highlight">Anish Kumar</span></p>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/anish-kumar-aks/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/anishks22" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>
+                    </a>
+                    <a href="https://leetcode.com/anish121" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                            <path
+                                d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+                        </svg>
+                    </a>
+                    <a href="mailto:anish.aks121@gmail.com" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"
+                            height="18">
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        </svg>
+                    </a>
+                </div>
+                <p class="footer-copyright">&copy;
+                    <script>document.write(new Date().getFullYear())</script> All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Panel -->
+    <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Theme Settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3" />
+            <path
+                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+    </button>
+
+    <div class="theme-panel" id="theme-panel">
+        <div class="theme-panel-header">
+            <span class="theme-panel-title">🎨 Appearance</span>
+            <button class="theme-panel-close" id="theme-panel-close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="theme-section">
+            <p class="theme-section-label">Mode</p>
+            <div class="mode-switcher">
+                <button class="mode-btn active" data-mode="dark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                    Dark
+                </button>
+                <button class="mode-btn" data-mode="light">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    Light
+                </button>
+            </div>
+        </div>
+        <div class="theme-section">
+            <p class="theme-section-label">Accent Color</p>
+            <div class="color-grid">
+                <button class="color-swatch active" data-swatch="default" title="Cyan"></button>
+                <button class="color-swatch" data-swatch="emerald" title="Emerald"></button>
+                <button class="color-swatch" data-swatch="rose" title="Rose"></button>
+                <button class="color-swatch" data-swatch="amber" title="Amber"></button>
+                <button class="color-swatch" data-swatch="blue" title="Blue"></button>
+                <button class="color-swatch" data-swatch="teal" title="Teal"></button>
+                <button class="color-swatch" data-swatch="orange" title="Orange"></button>
+                <button class="color-swatch" data-swatch="pink" title="Pink"></button>
+                <button class="color-swatch" data-swatch="lime" title="Lime"></button>
+                <button class="color-swatch" data-swatch="indigo" title="Indigo"></button>
+                <button class="color-swatch" data-swatch="red" title="Red"></button>
+                <button class="color-swatch" data-swatch="violet" title="Violet"></button>
+                <button class="color-swatch" data-swatch="sky" title="Sky"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
