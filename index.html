@@ -786,7 +786,7 @@
                     or ways to contribute to your team. Feel free to reach out!
                 </p>
                 <div class="contact-cards">
-                    <a href="mailto:anish.aks121@gmail.com" class="contact-card">
+                    <div class="contact-card" id="email-card">
                         <div class="contact-card-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -795,7 +795,13 @@
                         </div>
                         <span class="contact-card-label">Email</span>
                         <span class="contact-card-value">anish.aks121@gmail.com</span>
-                    </a>
+                        <button class="copy-btn" id="copy-email" title="Copy Email">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
                     <a href="tel:+916204741025" class="contact-card">
                         <div class="contact-card-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -836,7 +842,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
+        <div class="container footer-container">
             <div class="footer-content">
                 <p class="footer-text">Designed &amp; Built by <span class="highlight">Anish Kumar</span></p>
                 <div class="footer-socials">
@@ -869,6 +875,13 @@
                 <p class="footer-copyright">&copy;
                     <script>document.write(new Date().getFullYear())</script> All Rights Reserved
                 </p>
+            </div>
+            <div class="visitor-counter" id="visitor-counter">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <span id="visitor-count">0</span> views
             </div>
         </div>
     </footer>
@@ -935,6 +948,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Toast Notification -->
+    <div id="toast-container"></div>
 
     <script src="script.js"></script>
 </body>

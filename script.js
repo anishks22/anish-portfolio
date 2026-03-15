@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
         initNavbar();
         initSmoothScroll();
         initCountUp();
+        initVisitorCounter();
+        initCopyEmail();
     } catch (err) {
         console.error('[Portfolio] Initialization error:', err);
     }
@@ -424,4 +426,99 @@ function initLightbox() {
             closeLightbox();
         }
     });
+}
+
+/* ============================================
+   Visitor Counter (counterapi.dev)
+   ============================================ */
+function initVisitorCounter() {
+    const counterEl = document.getElementById('visitor-count');
+    if (!counterEl) return;
+
+    // We use counterapi.dev which is free and easy to use
+    // Namespace: anishks22-portfolio (based on username/repo)
+    // Key: visits
+    const namespace = 'anishks22-portfolio';
+    const key = 'visits';
+    const url = `https://api.counterapi.dev/v1/${namespace}/${key}/up`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data && typeof data.count === 'number') {
+                // Animate the count up
+                animateCounter(counterEl, data.count);
+            }
+        })
+        .catch(err => {
+            console.error('[Portfolio] Visitor counter error:', err);
+            counterEl.textContent = '---';
+        });
+
+    function animateCounter(el, target) {
+        const duration = 1500;
+        const start = 0;
+        const startTime = performance.now();
+
+        function update(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            if (elapsedTime < duration) {
+                const progress = elapsedTime / duration;
+                const currentCount = Math.floor(progress * target);
+                el.textContent = currentCount.toLocaleString();
+                requestAnimationFrame(update);
+            } else {
+                el.textContent = target.toLocaleString();
+            }
+        }
+        requestAnimationFrame(update);
+    }
+}
+
+/* ============================================
+   Copy Email & Toast
+   ============================================ */
+function initCopyEmail() {
+    const btn = document.getElementById('copy-email');
+    if (!btn) return;
+
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const email = 'anish.aks121@gmail.com';
+        navigator.clipboard.writeText(email).then(() => {
+            showToast('Email copied to clipboard!');
+            
+            // Subtle feedback on the button
+            btn.innerHTML = `
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            `;
+            setTimeout(() => {
+                btn.innerHTML = `
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                `;
+            }, 2000);
+        });
+    });
+}
+
+function showToast(message) {
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+
+    container.appendChild(toast);
+
+    setTimeout(() => {
+        toast.remove();
+    }, 3000);
 }
